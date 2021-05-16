@@ -1,0 +1,360 @@
+#newsfeed {
+  //height: 100vh;
+  min-width: 525px;
+  max-width: 525px;
+  background-color: $primarylight1;
+  overflow-y: auto;
+  color: $textcolor;
+  padding: 0 !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+
+  .myhoverable {
+    transition: box-shadow 0.25s;
+  }
+
+  .myhoverable:hover {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .news {
+    border-color: blue !important;
+
+    .divider {
+      background-color: blue !important;
+    }
+  }
+
+  .event {
+    border-color: #e7a21d !important;
+
+    .divider {
+      background-color: #e7a21d !important;
+    }
+  }
+
+  .feed-post {
+    overflow: auto;
+    background-color: $feedbackgroundcolor;
+    margin-bottom: 12px;
+    padding: 18px 18px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1.2px;
+    border-color: grey;
+    overflow: auto;
+    line-height: 1.6;
+    font-size: 12px;
+
+    h3 {
+      font-weight: 120;
+      font-size: 1.6rem;
+      color: white;
+      text-align: left;
+      margin: 0;
+      overflow: hidden;
+      max-height: 8vh;
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        color: $textcolor;
+        text-align: left;
+        display: flex;
+      }
+    }
+
+    .divider {
+      margin-top: 8px;
+      margin-bottom: 10px;
+      background-color: #a1a1a1;
+    }
+
+    .feed-item-body {
+      overflow: hidden;
+      max-height: 13vh;
+
+      .inputed-post {
+        overflow: auto;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+          margin: 12px 0;
+          text-align: left;
+          font-size: 20px;
+        }
+
+        p {
+          width: 100%;
+          overflow: auto;
+
+          u {
+            text-align: left;
+          }
+        }
+      }
+
+      p {
+        color: $textcolor;
+        text-align: left;
+        float: left;
+        margin: 0;
+      }
+
+      ol,
+      ul {
+        li {
+          text-align: left;
+        }
+      }
+
+      blockquote {
+        text-align: left;
+      }
+    }
+
+    .read-more-link {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      text-align: left;
+      display: flex;
+      color: black;
+    }
+
+    .feed-item-footer {
+      color: $textcolor;
+      display: block;
+
+      .feed-item-footer-left {
+        //background-color: #D3D3D3;
+        border-radius: 7px;
+        width: 100%;
+        text-align: left;
+
+        time {
+          display: inline-block;
+          color: $textcolor;
+          text-align: left;
+        }
+
+        span {}
+
+        strong {
+          display: inline-block;
+          color: $textcolor;
+          text-align: left;
+
+          a {
+            display: inline-block;
+            color: $textcolor;
+            text-align: left;
+          }
+        }
+
+        .chip {
+          margin-left: 5px;
+          color: $textcolor;
+        }
+
+        .comment-button {
+          display: inline-block;
+          float: right;
+          display: table;
+
+          .i-wrapper {
+            display: flex;
+            margin: auto 0;
+
+            i {
+              color: $primarycolor;
+              margin-right: 10px;
+              padding: 5px;
+              margin: 0;
+            }
+
+            span {
+              align-self: center;
+            }
+          }
+
+          span {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    .comments-container {
+      display: none;
+
+      .comments {
+        margin-top: 6px;
+        border: none;
+        //border-style: solid;
+        //border-color: black;
+        //border-radius: 0.5em;
+        padding: 0;
+        align-items: baseline;
+        align-content: center;
+
+        ul {
+          li {
+            border: none;
+
+            img {
+              border-radius: 100% !important;
+              display: inline-block;
+              margin-bottom: 15px;
+              //width: 8%;
+            }
+
+            .card {
+              display: inline-block;
+              border-radius: 0.5em;
+              margin-left: 12px;
+              width: 80%;
+              vertical-align: bottom;
+              box-shadow: 0 0 0 0;
+            }
+
+            .card::after {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 40%;
+              width: 0;
+              height: 0;
+              border: 1.125em solid transparent;
+              border-right-color: white;
+              border-left: 0;
+              border-bottom: 0;
+              margin-top: -0.562em;
+              margin-left: -1.125em;
+            }
+
+            .card-content {
+              padding: 3px 8px 10px;
+              min-height: 40px;
+              text-align: left;
+
+              h6 {
+                font-size: 0.8em;
+                margin: 0 0 3px;
+                border-radius: 0.3em;
+                font-style: italic;
+                font-weight: bold;
+              }
+
+              p {
+                margin-left: 12px;
+              }
+
+              .comment-post-date {
+                float: right;
+                font-style: italic;
+                font-size: 0.6em;
+              }
+            }
+            opacity: 0;
+            animation: {
+              name: comments;
+              duration: 100ms;
+              timing-function: ease-in-out;
+              fill-mode: forwards;
+            }
+            @keyframes comments {
+              0% {
+                opacity: 0;
+                transform: translateX(100px);
+              }
+
+              100% {
+                opacity: 1;
+                transform: translateX(0px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .show {
+      display: block !important;
+    }
+
+    .input-comment-header {
+      display: block;
+      float: left;
+      width: 100%;
+      font-size: 18px;
+
+      i {
+        font-size: 18px;
+      }
+    }
+
+    .new-comment {
+      form {
+        .input-comment-section {
+          padding: 5px 0;
+
+          .user-pic-wrapper {
+            padding: 8px 0 0 8px;
+            float: left;
+
+            .user-pic {
+              display: inline-block;
+              height: 34px;
+              width: 34px;
+              border-radius: 50%;
+            }
+          }
+
+          .input-comment-body {
+            input {
+              display: inline-block;
+              width: 86%;
+              border-bottom: none!important;
+              //box-shadow: none!important;
+            }
+
+            input:focus {
+              border-bottom: 1px solid black;
+              -webkit-box-shadow: 0 1px 0 0 black;
+              -moz-box-shadow: 0 1px 0 0 black;
+              box-shadow: 0 1px 0 0 black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+//////////////////////Old cart styles below
+#newsfeed .card-top {
+  height: 55px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#newsfeed .card-top .username {
+  margin-left: 10px;
+}
+
+#newsfeed .card-top .responsive-img {
+  float: left;
+  margin-left: 9px;
+  max-width: 85%;
+  max-height: 85%;
+}

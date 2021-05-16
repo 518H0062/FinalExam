@@ -1,0 +1,193 @@
+#event-section-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 92%;
+  //margin-top: 22px;
+  #content-area-row {
+    .profile-left-section {
+      display: flex;
+      flex-direction: column;
+      background-color: #c3ccd8;
+      height: 700px;
+      //width: 200px;
+      .profile-avatar {
+        border: 0.05em solid grey;
+        img {
+          align-self: center;
+        }
+      }
+      .social-media-links {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-left: 20px;
+  
+        #facebook-link,
+        #gitHub-link,
+        #instagram-link,
+        #linkedIn-link,
+        #twitter-link {
+          margin: 0 5px;
+          font-size: 2em;
+        }
+      }
+  
+      .profile-contact-info {
+        padding: 10px 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        display: block;
+        word-wrap: break-word;
+        font-size: 0.8em;
+  
+        p {
+          margin: 6px 10px;
+          font-size: 13px;
+        }
+  
+        h6 {
+          margin: 20px 10px 14px;
+          font-size: 20px;
+        }
+      }
+    }
+    .user-col {
+      text-align: left;
+
+      .user-pic-wrapper {
+        width: 100%;
+        overflow: auto;
+
+        .user-pic {
+          border-radius: 50%;
+          float: left;
+        }
+
+        .user-name {
+          margin: 0 !important;
+          text-align: left;
+        }
+
+        .time {
+          margin: 0 !important;
+          text-align: left;
+        }
+      }
+    }
+
+    #event-editor-area {
+      background-color: #FFFFFF;
+      -webkit-box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+      -moz-box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+      box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+      border: 1px solid #aaa;
+      border-radius: 10px 10px 0 0;
+      margin: 0;
+      padding: 0;
+
+      .event-editor-area-wrapper {
+        .post-event-header {
+          //background-color: $primarylight2;
+          /////////
+          background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+          /* ff3.6+ */
+          background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+          /* safari4+,chrome */
+          background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+          /* safari5.1+,chrome10+ */
+          background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+          /* opera 11.10+ */
+          background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+          /* ie10+ */
+          background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+          /* w3c */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+          /* ie6-9 */
+          /////Above is the gradient for the even header
+          height: 70px;
+          padding: 16px 30px;
+          border-radius: 10px 10px 0 0;
+          display: flex;
+          align-items: center;
+
+          h4 {
+            color: $white;
+            margin: 0;
+            padding: 0;
+            font-size: 25px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+          }
+        }
+
+        .post-event-body {
+          background-color: $primarylight2;
+          padding: 0 30px 16px;
+          height: 500px;
+          overflow: auto;
+
+          .event-header-wrapper {
+            #event-header {
+              text-align: left;
+              font-size: 1.4em;
+              background-color: $primarylight2;
+
+              input {}
+
+              input::-webkit-input-placeholder {
+                /* WebKit, Blink, Edge */
+                color: #808080;
+              }
+            }
+          }
+
+          #quill-area {
+            max-height: 500px;
+            display: block;
+            margin-top: 26px;
+
+            .ql-toolbar {
+              background-color: white;
+              border-radius: 6px;
+              margin-bottom: 10px;
+
+              .ql-formats {
+                button {
+                  svg {}
+                }
+              }
+            }
+
+            .ql-container {
+              border-radius: 6px;
+              background-color: white;
+              font-size: 1.2em;
+            }
+
+            #saveDelta {
+              background-color: $primarycolor;
+              margin-top: 5px;
+              margin-left: 10px;
+              float: right;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #preview {
+    margin-top: 22px;
+    margin-bottom: 30px;
+    background: $primarylight2;
+    display: block;
+    height: 25vh;
+  }
+}
+////////////////////////////////////
+
+#event-section-container #content-area-row #event-editor-area .event-editor-area-wrapper .post-event-body #quill-area .ql-container {
+  height: 300px;
+}

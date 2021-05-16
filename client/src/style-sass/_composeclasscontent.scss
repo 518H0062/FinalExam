@@ -1,0 +1,102 @@
+#event-editor-area {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+  -moz-box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+  box-shadow: -1px 1px 25px -9px rgba(0,0,0,0.7);
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin: 0;
+  padding: 0;
+
+  .event-editor-area-wrapper {
+    .post-news-header {
+      //background-color: $primarylight2;
+      //background-color: #3b5ca7;
+      background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* ff3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+      /* safari4+,chrome */
+      background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* safari5.1+,chrome10+ */
+      background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* opera 11.10+ */
+      background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* ie10+ */
+      background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+      /* ie6-9 */
+      //////////////////
+      /////Above is the gradient for the even header
+      height: 70px;
+      padding: 16px 30px;
+
+      h4 {
+        color: $white;
+        margin: 0;
+        padding: 0;
+        font-size: 25px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .post-event-body {
+      background-color: $primarylight2;
+      padding: 0 30px 16px;
+      height: 500px;
+      overflow: auto;
+
+      #event-header {
+        margin-top: 10px;
+        text-align: left;
+        font-size: 1.4em;
+        background-color: $primarylight2;
+        border-color: #DEDEDE;
+
+        input {
+          background-color: white;
+          margin-top: 10px;
+          height: 38px;
+        }
+
+        input::-webkit-input-placeholder {
+          /* WebKit, Blink, Edge */
+          color: #808080;
+        }
+      }
+
+      #quill-area {
+        max-height: 500px;
+        display: block;
+        margin-top: 8px;
+
+        .ql-toolbar {
+          background-color: white;
+          border-radius: 6px;
+          margin-bottom: 10px;
+
+          .ql-formats {
+            button {
+              svg {}
+            }
+          }
+        }
+
+        .ql-container {
+          border-radius: 6px;
+          background-color: white;
+          font-size: 1.2em;
+        }
+
+        #saveDelta {
+          background-color: $primarycolor;
+          margin-top: 5px;
+          margin-left: 10px;
+          float: right;
+        }
+      }
+    }
+  }
+}

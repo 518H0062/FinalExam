@@ -1,0 +1,35 @@
+//Here is our main scss file
+//Here we import the seperated scss file.
+//This style.scss file is what gets complied to the
+//style.css file in the style-css folder
+$feedbackgroundcolor: #f5f5f5;
+$textcolor: black;
+$primarycolor: #1565c0;
+$primarylight1: #e9ebee;
+$primarylight2: #c3ccd8;
+$primarydark: #005bb2;
+$hovertextcolor: #315ab4;
+$postitemcolor: #31579e;
+$white: #F5F5F5;
+$profileresumeresearchheight: 27.5%;
+@import "./postStyles.scss";
+@import "./_sidenav.scss";
+@import "./_alertbox.scss";
+@import "./_header.scss";
+@import "./_landing.scss";
+@import "./_alert-section.scss";
+@import "./_newsfeed.scss";
+@import "./_general.scss";
+@import "./_composeevent.scss";
+@import "./_composenews.scss";
+@import "./_composealert.scss";
+@import "./_feeditem.scss";
+@import "./_tempchat.scss";
+@import "./_registration_login.scss";
+@import "./_classpage.scss";
+@import "./_createclass.scss";
+@import "./_createsection.scss";
+@import "./_fixed_menu.scss";
+@import "./_verifyteacher.scss";
+@import "./_profile.scss";
+@import "./_composeclasscontent.scss";

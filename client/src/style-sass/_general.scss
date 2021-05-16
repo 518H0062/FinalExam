@@ -1,0 +1,95 @@
+body {}
+
+#page-background {
+  float: left;
+  z-index: -20;
+  height: 100vh;
+  background-color: #e9ebee;
+}
+
+.ql-editor strong {
+  font-weight: bold;
+}
+
+#loading {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#class-db-input {}
+///Below we have the class section area
+
+#class-select-area {
+  min-height: 90vh;
+  max-width: 1240px;
+
+  #class-select-wrap {
+    padding: 20px;
+    margin-bottom: 0;
+    background-color: #c3ccd8;
+    border-radius: 10px;
+    min-width: 798px;
+    min-height: 400px;
+
+    form {
+      padding: 0;
+    }
+
+    #class-list {
+      padding: 0;
+
+      li {
+        min-height: 24px;
+        margin-bottom: 8px;
+
+        button {
+          padding: 0 5px;
+          height: 20px;
+          line-height: inherit;
+          margin-bottom: 8px;
+        }
+      }
+
+      .divider {
+        margin-top: -10px;
+      }
+    }
+  }
+}
+
+.unverified{
+  text-decoration: line-through;
+}
+
+.reusable-header {
+  background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+  /* safari4+,chrome */
+  background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+  /* opera 11.10+ */
+  background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+  /* ie10+ */
+  background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+  /* ie6-9 */
+  /////Above is the gradient for the even header
+  height: 70px;
+  padding: 16px 30px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+
+  h4 {
+    color: $white;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+}

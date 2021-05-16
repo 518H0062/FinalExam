@@ -1,0 +1,93 @@
+#class-content-wrapper {
+  height: 100vh;
+  padding: 0;
+}
+
+#class-content-section {
+  display: inline-block;
+  padding: 0 !important;
+  border: 1px solid;
+  overflow: auto;
+  text-align: left;
+  margin-top: 15px;
+  border-radius: 5px;
+  margin-bottom: 100px;
+
+  .class-content-section-container {
+    .content-header {
+      border-bottom: 1px solid;
+      padding-left: 24px;
+      //background-color: $postitemcolor;
+      background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* ff3.6+ */
+      background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+      /* safari4+,chrome */
+      background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* safari5.1+,chrome10+ */
+      background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* opera 11.10+ */
+      background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* ie10+ */
+      background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+      /* w3c */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+      color: $white;
+
+      h2 {
+        font-weight: bold;
+        padding: 24px 0;
+        margin: 0;
+        text-align: left;
+        vertical-align: middle;
+        font-size: 30px;
+        width: 100%;
+      }
+    }
+
+    ul {
+      background-color: #fff;
+      padding: 0;
+      margin: 0;
+
+      .item-container {
+        border-bottom: 1px solid;
+        padding-left: 24px;
+
+        i {
+          vertical-align: middle;
+          display: inline-block;
+        }
+
+        .item {
+          display: inline-block;
+          padding: 12px 0;
+
+          a {
+            color: black;
+            text-decoration: underline;
+            padding-left: 12px;
+          }
+          ////////////////////Announcements section below
+          .announcement-header {
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: bold;
+          }
+
+          p {
+            padding: 0;
+            margin-top: 0;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+////////////////////////
+
+#content-area-row {
+  .post-content {
+    margin-top: 30px;
+  }
+}

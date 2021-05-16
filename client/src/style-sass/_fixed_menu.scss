@@ -1,0 +1,380 @@
+#fixedmenu {
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+  width: 200px;
+  margin: 0 auto;
+  height: 600px;
+  position: fixed;
+
+  .fixedmenu-wrapper {
+    width: 200px;
+    max-width: 200px;
+    padding: 0;
+  }
+
+  .fixedmenu-wrapper {
+    .myclassesheader {
+      color: #414750;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      font-size: 1.5rem;
+    }
+
+    .divider {
+      margin-top: 8px;
+      height: 0;
+      overflow: hidden;
+      border: black;
+      color: black;
+      background-color: black !important;
+    }
+  }
+
+  .dropdown {
+    float: left;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+
+    .dropbtn {
+      //margin-bottom: 35px;
+      display: block;
+      top: -4px;
+      min-width: 140px;
+      min-height: 14px;
+      height: 40px;
+      color: black;
+      padding: 14px 14px 14px 0;
+      font-size: 14px;
+      font-weight: bolder;
+      cursor: pointer;
+      z-index: auto;
+      margin-top: 10px;
+
+      &:focus,
+      &:hover {
+        border: 1px solid;
+        border-radius: 2px;
+        background-color: #E0E7F9;
+        color: $hovertextcolor;
+      }
+
+      span {
+        margin-left: 12px;
+        float: left;
+        position: relative;
+        top: -3px;
+      }
+
+      .left-icon {
+        float: left;
+        position: relative;
+        top: -6px;
+        left: 2px;
+      }
+
+      .right-icon {
+        margin-left: 8px;
+        float: right;
+        position: relative;
+        top: -6px;
+        left: 5px;
+      }
+
+      .material-icons {}
+    }
+
+    div {
+      min-width: 140px;
+
+      .select-class {
+        color: black;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 4px;
+        padding: 8px 8px 8px 4px;
+
+        &:focus,
+        &:hover {
+          border: 1px solid;
+          border-radius: 2px;
+          background-color: #E0E7F9;
+          color: $hovertextcolor;
+        }
+
+        .material-icons {
+          font-size: 24px;
+          float: left;
+          position: relative;
+          top: 0;
+          left: -11px;
+        }
+
+        span {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  /* Dropdown Button */
+  /* Dropdown button on hover & focus */
+  /* The container <div> - needed to position the dropdown content */
+  .class-item {
+    display: none;
+    position: relative;
+    margin-top: 0;
+    top: 0;
+    background-color: #f1f1f1;
+    color: black;
+    min-width: 90px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    -webkit-border-bottom-right-radius: 8px;
+    -webkit-border-bottom-left-radius: 8px;
+    -moz-border-radius-bottomright: 8px;
+    -moz-border-radius-bottomleft: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    z-index: 1;
+
+    li {
+      animation: menu1 300ms linear forwards;
+
+      a {
+        color: #182c57;
+        font-size: 14px;
+      }
+    }
+    @keyframes menu1 {
+      0% {
+        opacity: 0;
+        max-height: 0;
+        transform: scaleY(0%) translateY(0px);
+      }
+
+      100% {
+        opacity: 1;
+        max-height: 150px;
+        transform: scaleY(100%) translateY(0px);
+      }
+    }
+
+    ul {
+      color: black;
+      padding: 4px;
+      border-radius: 8px;
+      margin-bottom: 0;
+    }
+  }
+  /* Dropdown Content (Hidden by Default) */
+  .classesDropdown {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+    color: black;
+    min-width: 90px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* Links inside the dropdown */
+  .classesDropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  /* Change color of dropdown links on hover */
+  .classesDropdown a:hover {
+    background-color: #ddd;
+  }
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {
+    display: block !important;
+  }
+
+  .clicked {
+    border: $hovertextcolor 1px solid;
+    border-radius: 2px;
+    background-color: #E0E7F9;
+    color: $hovertextcolor;
+  }
+
+  ul {
+    margin-top: 20px;
+    text-align: center;
+
+    li {
+      font-size: 14px;
+      padding: 5px 0;
+      text-align: center;
+    }
+  }
+
+  .action-list {
+    clear: both;
+    display: block;
+
+    .header-li {
+      margin-left: 0;
+      height: 40px;
+      display: table;
+
+      .subheader {
+        font-size: 14px;
+        vertical-align: middle;
+        display: table-cell;
+
+        .actions-header {
+          color: black;
+          font-size: 20px;
+          text-align: left;
+        }
+
+        .material-icons {
+          float: left;
+          display: inline-block;
+
+          .actions {
+            float: left;
+            margin-left: 12px;
+          }
+        }
+
+        .running-link {
+          display: inline-block;
+        }
+
+        span {
+          display: flex;
+          align-items: flex-start;
+          margin: 0;
+        }
+      }
+    }
+
+    li {
+      margin-top: 3px;
+      padding: 0;
+      height: 40px;
+      width: 200px;
+
+      .subheader {
+        span {
+          font-size: 18px;
+          color: black;
+          float: left;
+        }
+      }
+
+      .material-icons {
+        font-size: 20px;
+        color: black;
+        float: left;
+        margin-right: 12px;
+      }
+
+      .admin-links {
+        min-width: 160px;
+        max-width: 160px;
+        width: 160px;
+
+        &:focus,
+        &:hover {
+          border: 1px solid;
+          border-radius: 2px;
+          background-color: #E0E7F9;
+          color: $hovertextcolor;
+        }
+      }
+
+      .waves-effect {
+        color: black;
+        float: left;
+        padding: 10px 10px 10px 4px;
+        min-width: 138px;
+
+        &:focus,
+        &:hover {
+          transition: box-shadow 0.25s, -webkit-box-shadow 0.25s;
+          border: 1px solid;
+          border-radius: 2px;
+          background-color: #E0E7F9;
+          color: $hovertextcolor;
+        }
+
+        a {
+          color: black;
+          float: left;
+
+          .action {
+            display: flex;
+            align-items: flex-start;
+            color: black;
+            font-size: 8px;
+            padding-left: 12px;
+            margin-left: 12px;
+          }
+        }
+
+        span {
+          font-size: 13px;
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .item-overflow {
+          position: relative;
+          left: -6px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+/////////Below is my own hover styles///////////
+
+.menu-hoverable {
+  transition: box-shadow 0.25s;
+}
+
+.menu-hoverable:hover {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+///Menu chips //
+
+.verify-chip {
+  display: inline;
+  position: relative;
+  font-size: 0.6em;
+  margin: 0;
+  padding: 0 10px;
+}
+///Below are the styles for News Item and Event Items colors
+
+.news-post {
+  color: #25477A !important;
+}
+
+.event-post {
+  color: #e7a21d !important;
+}
+
+.verify-teacher-icon {
+  color: #04e598 !important;
+}
+
+.alert-icon {
+  color: #DD5753 !important;
+}
+
+.createsection {
+  color: #cebb08 !important;
+}
+
+.input-class-icon {
+  color: #2241df !important;
+}

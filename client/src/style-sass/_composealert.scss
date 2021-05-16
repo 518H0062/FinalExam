@@ -1,0 +1,144 @@
+#alert-preview {
+  width: 50%;
+  display: inline-block;
+
+  h4 {
+    font-size: 16px;
+  }
+}
+
+.feed-item-container {
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #aaa;
+  background-color: #fff;
+  overflow: auto;
+  border-bottom: 0;
+
+  #feed-item-header {
+    //Was $primarylight2 for the greate color
+    background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+    /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* ie10+ */
+    background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+    /* ie6-9 */
+    overflow: auto;
+    padding: 8px 16px;
+
+    h4 {
+      color: $white;
+      margin: 0;
+      padding: 10px 0;
+      font-size: 25px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .feed-item-body {
+    padding: 0;
+    border-top: 0;
+    height: 100%;
+    overflow: auto;
+
+    #quill {
+      border-top: 0 !important;
+
+      .ql-editor {
+        padding: 16px 15px;
+      }
+
+      .ql-container {
+        .ql-snow {
+          border-top: 0;
+        }
+      }
+    }
+
+    .ql-container .ql-snow {}
+
+    p {
+      line-height: 1.8;
+    }
+  }
+}
+
+#alert-type-selector {
+  float: left;
+  top: 0;
+  width: 40%;
+  display: inline-block;
+
+  .input-field {
+    .select-wrapper {
+      .select-dropdown {}
+    }
+
+    label {
+      color: black;
+    }
+  }
+}
+
+.input-field {
+  .active {
+    color: black;
+  }
+}
+//Below is CSS to change the color of inout feilds
+/* label color */
+.input-field label {
+  color: #000;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: #000;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000;
+}
+//Above is CSS to change the color of inout feilds
+
+.input-field {
+  #textarea1 {}
+}
+
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #1565c0;
+  box-shadow: 0 1px 0 0 #1565c0;
+}
+
+.btn {
+  background-color: #1565c0;
+}
+///////////////////////////////////////////////

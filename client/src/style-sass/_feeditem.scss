@@ -1,0 +1,316 @@
+.user-col {
+  margin-top: 15px;
+  text-align: left;
+
+  .user-pic-wrapper {
+    width: 100%;
+    overflow: auto;
+
+    .user-pic {
+      border-radius: 50%;
+      float: left;
+    }
+
+    .user-name {
+      margin: 0 !important;
+      text-align: left;
+    }
+
+    .time {
+      margin: 0 !important;
+      text-align: left;
+    }
+  }
+}
+///////////////////////////////////////
+
+.comments {
+  background-color: #c3ccd8;
+  border: 1px;
+  border-top: 0;
+  border-style: solid;
+  border: 1px solid #aaa;
+  -webkit-border-bottom-right-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  padding: 4px 12px;
+  align-items: center;
+  margin-top: 15px;
+  background-color: white;
+
+  .comments-header {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+
+    i {
+      display: inline-block;
+      color: #1565c0;
+    }
+
+    h6 {
+      margin: 0 10px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    #show-hide-btn {
+      display: inline-block;
+      color: #1565c0;
+      margin: 0;
+    }
+  }
+
+  a {
+    display: inline-block;
+    margin: 0 0 5px 5px;
+  }
+
+  ul {
+    a {
+      color: black;
+
+      &:hover {
+        color: #1565c0;
+      }
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      //border: black solid 0.05em;
+      border-radius: 0.4em;
+      margin-bottom: 6px;
+      padding-left: 6px;
+      background-color: #c3ccd8;
+
+      img {
+        border-radius: 50% !important;
+        display: inline-block;
+        margin-bottom: 15px;
+        width: 20%;
+        width: 44px;
+        height: 44px;
+      }
+
+      .card {
+        display: inline-block;
+        border-radius: 0.5em;
+        margin-left: 20px;
+        width: 80%;
+        vertical-align: bottom;
+        box-shadow: 0 0 0 0;
+      }
+
+      .card::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 40%;
+        width: 0;
+        height: 0;
+        border: 1.125em solid transparent;
+        border-right-color: white;
+        border-left: 0;
+        border-bottom: 0;
+        margin-top: -0.562em;
+        margin-left: -1.125em;
+      }
+
+      .card-content {
+        padding: 3px 8px 10px;
+        min-height: 40px;
+
+        h6 {
+          display: inline-block;
+          margin: 0 0 8px;
+          border-radius: 0.3em;
+          font-style: italic;
+          font-weight: bold;
+        }
+
+        p {
+          vertical-align: bottom;
+          margin-left: 12px;
+        }
+
+        .comment-post-date {
+          float: right;
+          font-style: italic;
+          font-size: 0.6em;
+        }
+      }
+      opacity: 0;
+      animation: {
+        name: comments;
+        duration: 200ms;
+        timing-function: ease-in-out;
+        fill-mode: forwards;
+      }
+      @keyframes comments {
+        0% {
+          opacity: 0;
+          transform: translateX(300px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateX(0px);
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////////////////////
+
+.new-comment {
+  .input-comment-form {
+    .input-comment-body {
+      display: flex;
+      padding: 10px 5px;
+      align-items: center;
+      justify-content: flex-start;
+
+      .circle {
+        width: 44px;
+        height: 44px;
+      }
+
+      .input-wrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 35px;
+        overflow: hidden;
+        border-radius: 16px;
+        border: 1px solid grey;
+        width: 90%;
+
+        input {
+          position: relative;
+          top: -7px;
+          left: 5px;
+          border-bottom: none!important;
+          box-shadow: none!important;
+          padding: 0 10px;
+          margin: 0;
+          width: 95%;
+        }
+
+        input:focus {
+          border-bottom: none!important;
+          box-shadow: none!important;
+        }
+
+        input::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: black;
+          opacity: 0.55;
+          font-size: 15px;
+          /* Firefox */
+        }
+      }
+
+      .btn-small {}
+    }
+  }
+}
+////below is the CSS for the feed item post
+.input-comment-body {
+  display: flex;
+  padding: 10px 5px;
+  align-items: center;
+  justify-content: flex-start;
+
+  .circle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .input-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 16px;
+    border: 1px solid grey;
+    width: 90%;
+
+    input {
+      position: relative;
+      top: -7px;
+      left: 5px;
+      border-bottom: none!important;
+      box-shadow: none!important;
+      padding: 0 10px;
+      margin: 0;
+      width: 95%;
+    }
+
+    input:focus {
+      border-bottom: none!important;
+      box-shadow: none!important;
+    }
+
+    input::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: black;
+      opacity: 0.55;
+      font-size: 15px;
+      /* Firefox */
+    }
+  }
+
+  .btn-small {}
+}
+.profile-left-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #c3ccd8;
+  height: 700px;
+  //width: 200px;
+  .profile-avatar {
+    border: 0.05em solid grey;
+    img {
+      width: 100%;
+      align-self: center;
+    }
+  }
+  .social-media-links {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-left: 20px;
+
+    #facebook-link,
+    #gitHub-link,
+    #instagram-link,
+    #linkedIn-link,
+    #twitter-link {
+      margin: 0 5px;
+      font-size: 2em;
+    }
+  }
+
+  .profile-contact-info {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    display: block;
+    word-wrap: break-word;
+    font-size: 0.8em;
+
+    p {
+      margin: 6px 10px;
+      font-size: 13px;
+    }
+
+    h6 {
+      margin: 20px 10px 14px;
+      font-size: 20px;
+    }
+  }
+}

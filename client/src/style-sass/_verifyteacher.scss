@@ -1,0 +1,85 @@
+#verifyteacher-container {
+  background-color: $primarylight2;
+  position: relative;
+  top: 12%;
+  left: 12%;
+  width: 60%;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid;
+  height: 250px;
+  max-width: 746px;
+  text-align: center;
+  margin-top: 15px;
+  padding: 0 12px 12px;
+
+  .verifyteacher-body {
+    padding: 16px 30px;
+  }
+
+  #verify-left {
+    padding: 0 11.25px 0 0;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+  }
+
+  #verify-right {
+    padding: 0 11.25px 0 0;
+    border-top-left-radius: 1vh;
+    border-bottom-left-radius: 1vh;
+  }
+
+  .btn {
+    &:hover {
+      background-color: #1565c0;
+    }
+  }
+}
+////// Verify Students are below
+
+#student-list {
+  position: relative;
+  top: 12%;
+  left: 12%;
+  padding: 0;
+  background-color: #c3ccd8;
+  min-width: 525px;
+  max-width: 525px;
+  border: 1px solid #aaa;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+  .student-list-ul {
+    margin: 0;
+
+    .student-list-li {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 12px 8px;
+      border-bottom: 1px solid #aaa;
+
+      circle {}
+
+      p {
+        margin: 0;
+
+        p {
+          margin: 4px 0;
+          display: block;
+        }
+      }
+
+      a {}
+    }
+  }
+
+  .reusable-header {
+    display: flex;
+    justify-content: center;
+
+    h4 {
+      color: white;
+    }
+  }
+}

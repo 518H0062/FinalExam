@@ -1,0 +1,136 @@
+#header-div {
+  height: 64px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+#header-div::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#header-nav {
+  position: fixed;
+  top: 0;
+  bottom: inherit;
+  left: 0;
+  z-index: 3;
+  background: #4b6cb7;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #283858, #3b5ca7);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  #nav-wrapper {
+    #header-row {
+      height: 64px;
+      margin: 0;
+
+      #header-logo {
+        height: 64px;
+        padding: 0;
+
+        .brand-logo {
+          height: 64px;
+
+          img {
+            max-width: 100%;
+            height: 100%;
+          }
+        }
+
+        a {
+          height: 64px;
+        }
+      }
+
+      #header-search-bar {
+        height: 64px;
+        padding: 0;
+
+        .input-field {
+          display: flex;
+          align-items: center;
+
+          .input-field-wrapper {
+            height: 64px;
+            width: 100%;
+
+            .label-icon {
+              height: 64px;
+
+              i {}
+            }
+
+            #search {
+              display: inline-block;
+              width: 90%;
+              margin-bottom: 0;
+              height: 30px;
+            }
+
+            .material-icons {
+              display: inline-block;
+              width: 10%;
+              height: 64px;
+              padding-top: 4px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+
+      #header-buttons {
+        height: 64px;
+
+        .right {
+          li {
+            a {}
+          }
+
+          .header-user-btn {
+            a {
+              #header-avatar {}
+
+              .hide-on-med-and-down {
+                margin-left: 5px;
+                vertical-align: top;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #header-avatar {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 5px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .header-user-btn {
+    a {
+      margin: 0 5px;
+      padding: 0;
+    }
+
+    img {
+      margin-top: 0.4em;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .brand-logo {
+    position: relative;
+    display: inline-block;
+  }
+}

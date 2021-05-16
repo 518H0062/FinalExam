@@ -1,0 +1,161 @@
+#class-db-input {
+  position: relative;
+  top: 12%;
+  left: 12%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid;
+  margin-top: 15px;
+  background-color: #c3ccd8;
+
+  h3 {
+    margin: 0 0 5px;
+    padding: 0;
+    font-size: 24px;
+    width: 100%;
+    display: block;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  form {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 20px;
+
+    .btn {
+      &:hover {
+        background-color: #1565c0;
+      }
+    }
+  }
+}
+
+#class-list {
+  margin: 0;
+
+  .divider {
+    background-color: black;
+  }
+
+  .col {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+//Below we change the color of the selection button
+
+.btn-small {
+  background-color: #1565c0 !important;
+}
+
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 1px solid #E0E7F9;
+}
+
+.input-field {
+  label {
+    width: auto !important;
+  }
+}
+
+.input-field li span {
+  color: #1565c0;
+}
+
+.input-field .validate {
+  color: #1565c0;
+  border-bottom: #1565c0;
+}
+
+.input-field .active {
+  color: #1565c0 !important;
+  border-bottom: #1565c0;
+}
+//////Below is used to change the default color of the input fields
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #1565c0;
+  box-shadow: 0 0 0 0 #1565c0;
+}
+//////Above is used to change the default color of the input fields
+
+.selectclasses-wrapper {
+  margin-top: 15px;
+  padding: 0 !important;
+  height: 100%;
+  height: 600px;
+  overflow: auto;
+  border: 0.8px solid black;
+  background-color: #e2f1f8;
+  background-color: #c3ccd8;
+  border-radius: 10px 10px 0 0;
+
+  .selectclasses-header {
+    background: -moz-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #3661B5), color-stop(46%, #2E5599), color-stop(75%, #294D88), color-stop(100%, #25477A));
+    /* safari4+,chrome */
+    background: -webkit-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* ie10+ */
+    background: radial-gradient(ellipse at center, #3661B5 0%, #2E5599 46%, #294D88 75%, #25477A 100%);
+    /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=  '#3661B5', endColorstr='#25477A',GradientType=1 );
+    /* ie6-9 */
+    /////Above is the gradient for the even header
+    height: 70px;
+    padding: 16px 20px;
+    border-radius: 10px 10px 0 0;
+    //border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    h4 {
+      color: $white;
+      margin: 0;
+      padding: 0;
+      font-size: 25px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .selectclasses-body {
+    padding: 5px 20px;
+  }
+
+  form {
+    margin: 10px 0 0;
+  }
+
+  #class-cart {
+    //border-radius: 0.66em;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    background-color: $primarylight1;
+
+    h6 {
+      text-align: center;
+    }
+
+    li {
+      font-size: 0.82em;
+      text-align: center;
+    }
+
+    button {
+      padding: 0;
+      height: 18px;
+      line-height: inherit;
+      margin-bottom: 6px;
+    }
+  }
+}

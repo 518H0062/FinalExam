@@ -1,0 +1,137 @@
+#register-form {
+  width: 75%;
+  height: 75vh;
+  overflow: auto;
+  background-color: #c3ccd8;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-top: 0;
+  -webkit-box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0 0 3px -1px rgba(0,0,0,0.75);
+  box-shadow: 0 0 4px -1px rgba(0,0,0,0.75);
+
+  .reusable-header {
+    display: flex;
+    justify-content: center;
+
+    h4 {}
+  }
+
+  .register-input-fields {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+
+    #registration {
+      width: 500px;
+      height: 300px;
+      margin-top: 15px;
+
+      .row {
+        margin: 0 0 5px;
+
+        .input-field {
+          .inline {}
+
+          .validate {
+            color: black;
+            box-shadow: inset 0 0 3px 0 #ABABAB;
+            -webkit-box-shadow: inset 0 0 3px 0 #ABABAB;
+            -moz-box-shadow: inset 0 0 3px 0 #ABABAB;
+            -o-box-shadow: inset 0 0 3px 0 #ABABAB;
+            background-color: white;
+            border: 1px solid #000;
+            border-radius: 5px;
+            height: 36px;
+          }
+
+          .validate::placeholder {
+            color: #576781;
+            color: black;
+            font-size: 14px;
+            position: relative;
+            left: 10px;
+          }
+
+          .register-login-labels {
+            margin-left: 12px;
+          }
+
+          label {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+#login-form {}
+
+.container {
+  .row {
+    #login-form {
+      background-color: #c3ccd8;
+      margin: 0 auto;
+      text-align: center;
+      width: 75%;
+      max-width: 835px;
+      height: 70vh;
+      max-height: 400px;
+      border-radius: 10px;
+
+      .reusable-header {
+        display: flex;
+        justify-content: center;
+      }
+
+      .login-input-fields {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #login {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        width: 400px;
+
+        .row {
+          margin: 0;
+
+          .input-field {
+            .validate {
+              box-shadow: inset 0 0 3px 0 #ABABAB;
+              -webkit-box-shadow: inset 0 0 3px 0 #ABABAB;
+              -moz-box-shadow: inset 0 0 3px 0 #ABABAB;
+              -o-box-shadow: inset 0 0 3px 0 #ABABAB;
+              background-color: white;
+              border: 1px solid #000;
+              border-radius: 5px;
+              height: 36px;
+            }
+
+            .validate::placeholder {
+              color: #576781;
+              color: black;
+              font-size: 14px;
+              position: relative;
+              left: 10px;
+            }
+            label{
+              width: auto;
+            }
+
+            .register-login-labels {
+              margin-left: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#alert-section {
+  min-height: 5vmax;
+  min-width: 250px;
+  width: 250px;
+  //Comment these above if you want to change back to the grid view
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #e9ebee;
+  overflow-y: auto;
+  display: inline-block;
+
+  .btn {
+    background-color: #3A5BA6;
+    margin-bottom: 10px;
+  }
+}
+//////////////////////
+//////////////////////
+
+#alert-section-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 92%;
+  padding-top: 0;
+  
+}
+.modal{
+    z-index: 999 !important;
+  }
