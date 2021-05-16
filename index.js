@@ -91,8 +91,10 @@ if (process.env.NODE_ENV == "production") {
   });
 }
 
-const PORT = process.env.PORT || 8080;
-server.listen(PORT, () => console.log("Listening to port " + PORT)
-);
-require("./services/socketIO")(io);
+// const PORT = process.env.PORT || 8080;
+// server.listen(PORT, () => console.log("Listening to port " + PORT, )
+// );
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});require("./services/socketIO")(io);
 

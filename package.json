@@ -32,6 +32,7 @@
     "nodemon": "^1.17.3",
     "npm": "^5.8.0",
     "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
     "passport-google-oauth20": "^1.0.0",
     "passport-local": "^1.0.0",
     "react-router-redux": "^4.0.8",
