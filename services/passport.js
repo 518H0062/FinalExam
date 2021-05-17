@@ -24,21 +24,22 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: "http://localhost:8080/auth/google/callback",
+      callbackURL: "/auth/google/callback",
       proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
+      console.log(profile);
       const existingUser = await User.findOne({ googleId: profile.id });
       if (existingUser) {
         // we already have a record with the given profile ID
         done(null, existingUser);
       } else {
-        // we don't have a user record with this ID, make a new record
+        //we don't have a user record with this ID, make a new record
         const user = await new User({
           googleId: profile.id,
           displayName: profile.displayName,
           name: profile.name,
-          avatar: profile._json.image.url,
+          avatar: profile._json.picture,
           email: profile.emails[0].value,
           teacher: false,
           admin: false
@@ -69,11 +70,10 @@ passport.use(
           profile.interests = "";
           profile.skills = "";
           profile.save(err => {
-            if (err) console.log(err);
+            // if (err) console.log(err);
+            done(null, user);
           });
-
         });
-        done(null, user);
       }
     }
   )

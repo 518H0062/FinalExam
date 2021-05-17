@@ -12,7 +12,7 @@
     "client": "npm run start --prefix client",
     "predev": "npm run sass-compile --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwarp && npm run build"
   },
   "author": "",
   "dependencies": {
@@ -33,7 +33,7 @@
     "npm": "^5.8.0",
     "passport": "^0.4.0",
     "passport-google-oauth": "^2.0.0",
-    "passport-google-oauth20": "^1.0.0",
+    "passport-google-oauth20": "^2.0.0",
     "passport-local": "^1.0.0",
     "react-router-redux": "^4.0.8",
     "socket.io": "^2.1.0"
