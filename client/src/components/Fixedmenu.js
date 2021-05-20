@@ -106,6 +106,42 @@ class Fixedmenu extends Component {
       </React.Fragment>
     );
   };
+
+  renderStudentList = () => {
+    return (
+      <React.Fragment>
+        <h4 className="myclassesheader"></h4>
+        <div className="divider" />
+        <div className="dropdown">
+          <ClassList
+            user={this.props.user}
+            classes={this.props.classes}
+          />
+          
+          <div>
+            {!(this.props.user.teacher || this.props.user.admin) ?
+              <Link className="select-class menu-hoverable" to="/newNews">
+                <i className="material-icons news-post">public</i>
+                <span>Đăng bài mới</span>
+              </Link> :
+
+              ""
+            }
+          </div>
+         
+            {!(this.props.user.teacher || this.props.user.admin) ?
+              <Link className="select-class menu-hoverable" to="/newAlert">
+                <i className="material-icons alert-icon">notifications_none</i>
+                <span>Đăng thông báo mới</span>
+              </Link> :
+
+              ""
+            }
+        </div>
+      </React.Fragment>
+    );
+  };
+
   renderMenu = () => {
     if (this.props.user == null || this.props.classes == null) {
     } else {
@@ -125,8 +161,8 @@ class Fixedmenu extends Component {
             {this.renderAdminActions()}
           </React.Fragment>
         );
-      } else if (user.teacher) {
-        return this.renderClassList();
+      } else if (user.googleId) {
+        return this.renderStudentList();
       }
     }
   };
