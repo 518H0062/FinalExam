@@ -161,9 +161,10 @@ class Fixedmenu extends Component {
             {this.renderAdminActions()}
           </React.Fragment>
         );
-      } else if (user.googleId) {
-        return this.renderStudentList();
-      }
+       } 
+      //else if (user.googleId) {
+      //   return this.renderStudentList();
+      // }
     }
   };
 
