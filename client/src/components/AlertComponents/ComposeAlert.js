@@ -33,7 +33,11 @@ class ComposeAlert extends Component {
         type: alertType.value,
         content: this.state.content
       }
-    axios.post("/api/new-alert/", alert).then(this.redirectBack())
+    axios.post("/api/new-alert/", alert).then(
+      setTimeout(() => {
+        this.redirectBack()
+       },1000)
+    )
     } else {
       M.toast({html: "Thông báo bị trống!!"})
     }
