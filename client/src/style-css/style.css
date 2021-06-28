@@ -496,29 +496,6 @@ body {
           #newsfeed .feed-post .feed-item-footer .feed-item-footer-left .comment-button span {
             display: table-cell;
             vertical-align: middle; }
-
-            #newsfeed .feed-post .comment-button-update-delete {
-              display: inline-block;
-              float: right;
-              display: table; 
-              margin-top: -30px;}
-              #newsfeed .feed-post .comment-button-update-delete .read-more-link {
-                display: flex;
-                margin: auto 0; }
-                #newsfeed .feed-post .comment-button-update-delete  .read-more-link i {
-                  color: #1565c0;
-                  margin-right: 10px;
-                  padding: 5px;
-                  margin: 0; }
-                #newsfeed .feed-post .comment-button-update-delete  .read-more-link span {
-                  align-self: center; }
-              #newsfeed .feed-post .comment-button-update-delete span {
-                display: table-cell;
-                vertical-align: middle; }
-                
-                #newsfeed .feed-post .comment-button-update-delete  .read-more-link span:hover {
-                  color: rgb(60, 142, 180); }
-
     #newsfeed .feed-post .comments-container {
       display: none; }
       #newsfeed .feed-post .comments-container .comments {
@@ -2300,11 +2277,9 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
   height: 700px; }
 
 .profile-container .profile-right-section {
-  display: block; margin-left: auto; margin-right: auto;
-  height: 400px;
-}
+  display: flex;
+  height: 350px; }
   .profile-container .profile-right-section .bio {
-   
     width: 60%;
     min-width: 370px;
     height: 378px;
@@ -2344,14 +2319,14 @@ input[type=text]:not(.browser-default):focus:not([readonly]) {
       list-style-type: none; }
       .profile-container .profile-right-section .bio .bio-ul .bio-li {
         width: 100%;
-        text-align: center; }
+        text-align: left; }
         .profile-container .profile-right-section .bio .bio-ul .bio-li .bio-li-header {
           margin: 8px 0;
           width: 100%;
-          text-align: center;
+          text-align: left;
           font-size: 16px; }
         .profile-container .profile-right-section .bio .bio-ul .bio-li p {
-          text-align: center;
+          text-align: left;
           margin: 0 0 12px; }
   .profile-container .profile-right-section .resume-research-projects {
     margin-left: 40px;
