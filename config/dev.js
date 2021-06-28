@@ -4,7 +4,7 @@ module.exports = {
     // googleClientSecret: "MPEpDkTIgKPgzYmUUt1J2sFS",
     
     googleClientID:"674482083620-o8n0f3oo7vjllhj7b10h7o4pr7k1vv6r.apps.googleusercontent.com",  
-    googleClientSecret: "nbdvF9C7b6A2QAgsz_XYtko7",
+    googleClientSecret: "MW_yoJp0Zp6bSY5c_XltVo-R",
 
     //mongoURI: "mongodb://CSC430-1:Dy1y5YpvyyVXOVm1Quw5@ds163918.mlab.com:63918/udemy-test" ,
     mongoURI: "mongodb+srv://user:21012014@cluster0.xp2br.mongodb.net/user?retryWrites=true&w=majority" ,
