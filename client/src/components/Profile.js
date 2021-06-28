@@ -14,18 +14,12 @@ const initialState = {
       profile: "",
       profile_classes: "",
       user_status: "",
-      facebook: "",
-      twitter: "",
-      instagram: "",
-      linkedIn: "",
-      gitHub: "",
+    
+ 
       tooltip_avatar: "",
-      social_media_eddit: "",
-      social_media_eddit_tooltip: "",
+      
       profile_eddit_tooltip: "",
       new_picture_url: "",
-      new_social_media_url: "",
-      new_social_media_url_flag: "",
       new_major: "",
       new_phone: "",
       new_address: "",
@@ -60,7 +54,6 @@ class Profile extends Component {
     this.checkUser();
     this.loadUserProfile(this.props.location.pathname);
     this.initTooltips();
-    this.initSocialMediaEddit();
   }
 
   edditPicture = e => {
@@ -83,40 +76,23 @@ class Profile extends Component {
     }
   };
 
-  initSocialMediaEddit = () => {
-    let elem = document.getElementById("edit-social-media-links");
-    if (elem) {
-      let instance = M.FloatingActionButton.init(elem, {
-        direction: "right",
-        hoverEnabled: false,
-        toolbarEnabled: false
-      });
-      this.setState({ social_media_eddit: instance });
-    } else {
-      setTimeout(this.initSocialMediaEddit, 50);
-    }
-  };
+
 
   initTooltips = () => {
     let edit_avatar = document.getElementById("edit-user-avatar");
-    let edit_soc_med = document.getElementById("social-media-eddit-button");
     let edit_profile = document.getElementById("eddit-profile-btn");
-    if (edit_avatar && edit_soc_med && edit_profile) {
+    if (edit_avatar && edit_profile) {
       let instance = M.Tooltip.init(edit_avatar, {
         html: "Edit Picture",
         position: "top"
       });
-      let instance1 = M.Tooltip.init(edit_soc_med, {
-        html: "Edit Social Media links",
-        position: "top"
-      });
+    
       let instance2 = M.Tooltip.init(edit_profile, {
         html: "Edit Profile Info",
         position: "top"
       });
       this.setState({
         tooltip_avatar: instance,
-        social_media_eddit_tooltip: edit_soc_med,
         profile_eddit_tooltip: instance2
       });
     } else {
@@ -129,72 +105,11 @@ class Profile extends Component {
     axios.get(`${"/api/user-profile"}/${url_id}`).then(res => {
       console.log(res.data);
 
-      this.setState({ profile: res.data }, this.mapSocialMediaLinks);
+      this.setState({ profile: res.data });
     });
   };
 
-  mapSocialMediaLinks = () => {
-    let { social_media } = this.state.profile;
-    let {
-      facebook,
-      twitter,
-      instagram,
-      linkedIn,
-      gitHub
-    } = this.state.profile.social_media;
-    if (social_media.facebook) {
-      facebook = (
-        <div id="facebook-link">
-          <a href={social_media.facebook} style={{ color: "#01579b" }}>
-            <i className="fab fa-facebook-square" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.twitter) {
-      twitter = (
-        <div id="twitter-link">
-          <a href={social_media.twitter} style={{ color: "#03a9f4" }}>
-            <i className="fab fa-twitter-square" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.instagram) {
-      instagram = (
-        <div id="instagram-link">
-          <a href={social_media.instagram} style={{ color: "#d81b60" }}>
-            <i className="fab fa-instagram" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.linkedIn) {
-      linkedIn = (
-        <div id="linkedIn-link">
-          <a href={social_media.linkedIn} style={{ color: "#2196f3" }}>
-            <i className="fab fa-linkedin" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.gitHub) {
-      gitHub = (
-        <div id="gitHub-link">
-          <a href={social_media.gitHub} style={{ color: "#424242" }}>
-            <i className="fab fa-github-square" />
-          </a>
-        </div>
-      );
-    }
-    this.setState({
-      facebook: facebook,
-      twitter: twitter,
-      instagram: instagram,
-      linkedIn: linkedIn,
-      gitHub: gitHub
-    }, this.mapProfileClasses);
-  };
+
 
   mapProfileClasses = () => {
     let classes = this.state.profile.classes;
@@ -230,77 +145,6 @@ class Profile extends Component {
     }
   }
 
-  renderSocialMediaLinks = () => {
-    return (
-      <div className="social-media-links">
-        {this.state.facebook}
-        {this.state.twitter}
-        {this.state.instagram}
-        {this.state.linkedIn}
-        {this.state.gitHub}
-      </div>
-    );
-  };
-
-  renderSocialMediaEdditButton = () => {
-    return (
-      <div id="edit-social-media-links" className="fixed-action-btn">
-        <a
-          id="social-media-eddit-button"
-          className="btn-floating btn blue darken-4"
-        >
-          <i className="large material-icons">mode_edit</i>
-        </a>
-        <ul>
-          <li>
-            <a
-              target="gitHub"
-              onClick={this.changeSocialMediaLink}
-              className="btn-floating btn-small grey darken-3"
-            >
-              <i className="fab fa-github" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="instagram"
-              onClick={this.changeSocialMediaLink}
-              className="btn-floating btn-small pink darken-1"
-            >
-              <i className="fab fa-instagram" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="twitter"
-              onClick={this.changeSocialMediaLink}
-              className="btn-floating btn-small light-blue"
-            >
-              <i className="fab fa-twitter" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="linkedIn"
-              onClick={this.changeSocialMediaLink}
-              className="btn-floating btn-small blue"
-            >
-              <i className="fab fa-linkedin-in" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="facebook"
-              onClick={this.changeSocialMediaLink}
-              className="btn-floating btn-small light-blue darken-4"
-            >
-              <i className="fab fa-facebook-f" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    );
-  };
 
   showPictureInput = e => {
     e.preventDefault();
@@ -315,9 +159,7 @@ class Profile extends Component {
   onPictureUrlChange = e => {
     this.setState({ new_picture_url: e.target.value });
   };
-  onSocialMediaUrlChange = e => {
-    this.setState({ new_social_media_url: e.target.value });
-  };
+ 
 
   uploadUpdatedPicture = e => {
     if (e.key === "Enter") {
@@ -340,56 +182,7 @@ class Profile extends Component {
     }
   };
 
-  changeSocialMediaLink = e => {
-    //e.preventDefault();
-    if (e.target.target) {
-      let elem = document.getElementById("social-media-edit-input");
-      if (elem.classList.contains("scale-in")) {
-        elem.classList.remove("scale-in");
-        this.setState({ new_social_media_url_flag: "" });
-      } else {
-        elem.classList.add("scale-in");
-        elem.firstChild.placeholder = e.target.target + " url";
-        this.setState({ new_social_media_url_flag: e.target.target });
-      }
-    } else {
-      let elem = document.getElementById("social-media-edit-input");
-      if (elem.classList.contains("scale-in")) {
-        elem.classList.remove("scale-in");
-        this.setState({ new_social_media_url_flag: "" });
-      } else {
-        elem.classList.add("scale-in");
-        elem.firstChild.placeholder = e.target.parentNode.target + " url";
-        this.setState({
-          new_social_media_url_flag: e.target.parentNode.target
-        });
-      }
-    }
-  };
 
-  uploadUpdatedSocialMediaUrl = e => {
-    e.preventDefault();
-    let new_url = this.state.new_social_media_url;
-
-    if(new_url.slice(0, 6) !== "https://" || new_url.slice(0, 5) !== "http://"){
-      new_url = "https://" + new_url;
-    }
-
-    axios
-      .put(
-        `${"/api/profile-update-social-media-url"}/${this.state.profile._id}/${
-          this.state.new_social_media_url_flag
-        }`,
-        { new_url: new_url }
-      )
-      .then(res => {
-        M.toast({html: res.data.message});
-        this.setState({new_social_media_url: "", new_social_media_url_flag: ""});
-        let elem = document.getElementById("social-media-edit-input");
-        elem.classList.remove("scale-in");
-        this.loadUserProfile(this.props.location.pathname);
-      });
-  };
 
   renderProfile = () => {
     switch (this.state.profile) {
@@ -423,27 +216,7 @@ class Profile extends Component {
                     ""
                   )}
                 </div>
-                {this.renderSocialMediaLinks()}
-                {this.state.edditable?
-                  <div className="social-media-FAB">
-                    {this.renderSocialMediaEdditButton()}
-                    <div
-                      id="social-media-edit-input"
-                      className="scale-transition scale-out"
-                    >
-                      <input
-                        value={this.state.new_social_media_url}
-                        onChange={this.onSocialMediaUrlChange}
-                        placeholder="Url"
-                      />
-                      <button
-                        onClick={this.uploadUpdatedSocialMediaUrl}
-                        className="btn-small"
-                      >
-                        <i className="material-icons">send</i>
-                      </button>
-                    </div>
-                  </div>:""}
+                    
                 <div className="divider"/>
                 <div className="profile-contact-info">
                   <p>{profile.displayName}</p>
