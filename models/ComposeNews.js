@@ -151,80 +151,8 @@ class ComposeNews extends Component {
     }).then(this.redirectBack())
   }
   };
-  mapSocialMediaLinks = () => {
-    let { social_media } = this.state.profile;
-    let {
-      facebook,
-      twitter,
-      instagram,
-      linkedIn,
-      gitHub
-    } = this.state.profile.social_media;
-    if (social_media.facebook) {
-      facebook = (
-        <div id="facebook-link">
-          <a href={social_media.facebook} style={{ color: "#01579b" }}>
-            <i className="fab fa-facebook-square" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.twitter) {
-      twitter = (
-        <div id="twitter-link">
-          <a href={social_media.twitter} style={{ color: "#03a9f4" }}>
-            <i className="fab fa-twitter-square" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.instagram) {
-      instagram = (
-        <div id="instagram-link">
-          <a href={social_media.instagram} style={{ color: "#d81b60" }}>
-            <i className="fab fa-instagram" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.linkedIn) {
-      linkedIn = (
-        <div id="linkedIn-link">
-          <a href={social_media.linkedIn} style={{ color: "#2196f3" }}>
-            <i className="fab fa-linkedin" />
-          </a>
-        </div>
-      );
-    }
-    if (social_media.gitHub) {
-      gitHub = (
-        <div id="gitHub-link">
-          <a href={social_media.gitHub} style={{ color: "#424242" }}>
-            <i className="fab fa-github-square" />
-          </a>
-        </div>
-      );
-    }
-    this.setState({
-      facebook: facebook,
-      twitter: twitter,
-      instagram: instagram,
-      linkedIn: linkedIn,
-      gitHub: gitHub
-    });
-  };
+ 
 
-  renderSocialMediaLinks = () => {
-    return (
-      <div className="social-media-links">
-        {this.state.facebook}
-        {this.state.twitter}
-        {this.state.instagram}
-        {this.state.linkedIn}
-        {this.state.gitHub}
-      </div>
-    );
-  };
 
   renderUser = () => {
     switch (this.state.profile) {
