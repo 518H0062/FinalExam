@@ -37,38 +37,7 @@ router.route("/profile-update-picture/:profile_id").put((req, res) => {
   });
 });
 
-router
-  .route("/profile-update-social-media-url/:profile_id/:type")
-  .put((req, res) => {
-    Profile.findById(req.params.profile_id, (err, profile) => {
-      let type = req.params.type;
-      if (req.body.new_url) {
-        switch (type) {
-          case "facebook":
-            profile.social_media.facebook = req.body.new_url;
-            break;
-          case "twitter":
-            profile.social_media.twitter = req.body.new_url;
-            break;
-          case "instagram":
-            profile.social_media.instagram = req.body.new_url;
-            break;
-          case "linkedIn":
-            profile.social_media.linkedIn = req.body.new_url;
-            break;
-          case "gitHub":
-            profile.social_media.gitHub = req.body.new_url;
-            break;
-          default:
-            break;
-        }
-      }
-      profile.save(err => {
-        if (err) console.log(err);
-        res.send({ message: "User " + type +  " url changed!" });
-      });
-    });
-  });
+
 
   router
   .route("/profile-update/:profile_id")

@@ -15,13 +15,7 @@ const profileSchema = new Schema({
   admin: Boolean,
   classes: Array,
   major: String,
-  social_media: {
-    facebook: String,
-    twitter: String,
-    instagram: String,
-    linkedIn: String,
-    gitHub: String
-  },
+
   resume: String,
   research: Array,
   projects: Array,

@@ -80,7 +80,6 @@ module.exports = app => {
       profile.teacher = newUser.teacher;
       profile.classes = [];
       profile.major = "";
-      profile.social_media = {facebook: "", twitter: "", instagram: "", linkedIn: "", gitHub: ""};
       profile.resume = "";
       profile.research = [];
       profile.projects = [];

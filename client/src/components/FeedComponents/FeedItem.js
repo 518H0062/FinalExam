@@ -23,7 +23,12 @@ class FeedItem extends Component {
       new_comment: "",
       skip: 0,
       loadMore: false,
-      profile: null
+      profile: null,
+      facebook: "",
+      twitter: "",
+      instagram: "",
+      linkedIn: "",
+      gitHub: ""
     };
   }
 
