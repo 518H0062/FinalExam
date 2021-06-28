@@ -78,7 +78,7 @@ class ComposeNews extends Component {
   loadProfile = () => {
     if(this.props.user){
           axios.get(`${"/api/user-profile"}/${this.props.user._id}`).then(res => {
-          this.setState({profile: res.data}, this.mapSocialMediaLinks);
+          this.setState({profile: res.data});
       });
 
       //Check Id 
@@ -166,7 +166,6 @@ class ComposeNews extends Component {
                 <div className="profile-avatar">
                   <img className="" src={this.state.profile.avatar} />
                 </div>
-                {this.renderSocialMediaLinks()}
                 <div className="divider"/>
                 <div className="profile-contact-info">
                   <p>{this.state.profile.displayName}</p>
