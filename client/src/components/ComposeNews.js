@@ -130,11 +130,7 @@ class ComposeNews extends Component {
         };
         axios.post("api/feed/news-post", newsPost).catch(err => {
           console.error(err);
-        }).then(
-          setTimeout(() => {
-            this.redirectBack()
-           },1000)
-        )
+        }).then(this.redirectBack())
   } else { //Update
     // M.toast({html: "Tựa đề bị bỏ trống"})
     let newsPost = {
